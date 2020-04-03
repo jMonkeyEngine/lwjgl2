@@ -12,7 +12,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
@@ -22,7 +21,7 @@ jobs:
     - name: Install required libs
       run: sudo apt install libjinput-java libxcursor-dev libxrandr-dev libxxf86vm-dev
     - name: Build with Ant
-      run: ant -noinput -buildfile build.xml generate-all compile compile_native jars release
+      run: ant -noinput -buildfile build.xml -Ddo.delete=yes generate-all compile compile_native jars release
     - uses: actions/upload-artifact@v1
       with:
         name: lwjgl.jar

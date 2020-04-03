@@ -89,7 +89,7 @@
 
         <antcall target="-jars_NoDEP" />
         <antcall target="javadoc" />
-        <antcall target="applet-release" />
+        <!-- <antcall target="applet-release" /> -->
 
         <!-- copy resources to res folder -->
         <copy todir="${lwjgl.temp}/res">

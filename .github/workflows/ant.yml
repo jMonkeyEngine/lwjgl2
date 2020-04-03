@@ -22,7 +22,7 @@ jobs:
     - name: Install required libs
       run: sudo apt install libjinput-java libxcursor-dev libxrandr-dev libxxf86vm-dev
     - name: Build with Ant
-      run: ant -noinput -buildfile build.xml all
+      run: ant -noinput -buildfile build.xml generate-all compile compile_native jars
     - uses: actions/upload-artifact@v1
       with:
         name: lwjgl.jar

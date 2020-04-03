@@ -51,12 +51,15 @@ import org.lwjgl.Sys;
 
 public class Cursor {
 	/** 1 bit transparency for native cursor */
+	@java.lang.annotation.Native
 	public static final int		CURSOR_ONE_BIT_TRANSPARENCY	= 1;
 
-	/** 8 bit alhpa native cursor */
+	/** 8 bit alpha native cursor */
+	@java.lang.annotation.Native
 	public static final int		CURSOR_8_BIT_ALPHA					= 2;
 
 	/** animation native cursor */
+	@java.lang.annotation.Native
 	public static final int		CURSOR_ANIMATION						= 4;
 
 	/** First element to display */

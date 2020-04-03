@@ -43,6 +43,7 @@ import java.lang.UnsatisfiedLinkError;
  * $Id$
  */
 final class LinuxSysImplementation extends J2SESysImplementation {
+	@java.lang.annotation.Native
 	private static final int JNI_VERSION = 19;
 
 	static {

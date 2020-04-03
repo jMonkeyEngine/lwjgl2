@@ -37,7 +37,6 @@ import java.lang.reflect.Modifier;
 import java.nio.Buffer;
 
 import sun.misc.Unsafe;
-import sun.reflect.FieldAccessor;
 
 /**
  * MemoryUtil.Accessor implementations that depend on sun.misc.
@@ -99,35 +98,6 @@ final class MemoryUtilSun {
 			}
 
 			throw new UnsupportedOperationException();
-		}
-
-	}
-
-	/** Implementation using reflection on ByteBuffer, FieldAccessor is used directly. */
-	private static class AccessorReflectFast implements MemoryUtil.Accessor {
-
-		private final FieldAccessor addressAccessor;
-
-		AccessorReflectFast() {
-			Field address;
-			try {
-				address = MemoryUtil.getAddressField();
-			} catch (NoSuchFieldException e) {
-				throw new UnsupportedOperationException(e);
-			}
-			address.setAccessible(true);
-
-			try {
-				Method m = Field.class.getDeclaredMethod("acquireFieldAccessor", boolean.class);
-				m.setAccessible(true);
-				addressAccessor = (FieldAccessor)m.invoke(address, true);
-			} catch (Exception e) {
-				throw new UnsupportedOperationException(e);
-			}
-		}
-
-		public long getAddress(final Buffer buffer) {
-			return addressAccessor.getLong(buffer);
 		}
 
 	}

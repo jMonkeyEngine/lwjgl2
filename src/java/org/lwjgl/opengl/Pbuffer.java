@@ -52,6 +52,7 @@ public final class Pbuffer extends DrawableGL {
 	/**
 	 * Indicates that Pbuffers can be created.
 	 */
+	@java.lang.annotation.Native
 	public static final int PBUFFER_SUPPORTED = 1 << 0;
 
 	/**

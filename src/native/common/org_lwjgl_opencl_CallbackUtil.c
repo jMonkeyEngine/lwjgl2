@@ -39,7 +39,6 @@
 #include <jni.h>
 #include "common_tools.h"
 #include "extcl.h"
-#include "org_lwjgl_opencl_CallbackUtil.h"
 
 static jmethodID contextCallbackJ;
 static jmethodID memObjectDestructorCallbackJ;

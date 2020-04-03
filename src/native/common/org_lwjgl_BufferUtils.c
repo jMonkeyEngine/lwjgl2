@@ -1,4 +1,3 @@
-#include "org_lwjgl_BufferUtils.h"
 #include "common_tools.h"
 
 JNIEXPORT void JNICALL Java_org_lwjgl_BufferUtils_zeroBuffer0(JNIEnv *env, jclass clazz, jobject buffer, jlong offset, jlong size) {

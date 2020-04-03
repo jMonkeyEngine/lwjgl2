@@ -11,7 +11,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -20,5 +19,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
+    - name: Install required libs
+      run: sudo apt install libjinput-java libxcursor-dev libxrandr-dev libxt-dev libxxf86vm-dev
     - name: Build with Ant
       run: ant -noinput -buildfile build.xml

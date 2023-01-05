@@ -250,6 +250,15 @@ public class XRandR {
 	}
 
 	/**
+	 * @return the name of connected primary screen, or null if
+	 * xrandr is not supported.
+	 */
+	public static String getPrimaryScreenName() {
+		populate();
+		return primaryScreenIdentifier;
+	}
+
+	/**
 	 * @param name
 	 *
 	 * @return the possible resolutions of the named screen, or

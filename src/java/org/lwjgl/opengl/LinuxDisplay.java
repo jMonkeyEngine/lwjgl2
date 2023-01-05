@@ -947,7 +947,7 @@ final class LinuxDisplay implements DisplayImplementation {
                                     bpp = nDisplayModes[0].getBitsPerPixel();
                                 }
                                 // get the resolutions and frequencys from XRandR
-                                Screen[] resolutions = XRandR.getResolutions(XRandR.getScreenNames()[0]);
+                                Screen[] resolutions = XRandR.getResolutions(XRandR.getPrimaryScreenName());
                                 DisplayMode[] modes = new DisplayMode[resolutions.length];
                                 for (int i = 0; i < modes.length; i++) {
                                     modes[i] = new DisplayMode(resolutions[i].width, resolutions[i].height, bpp, resolutions[i].freq);

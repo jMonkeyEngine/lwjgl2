@@ -20,7 +20,7 @@ jobs:
     - name: Set up JDK 1.8
       uses: actions/setup-java@v1
       with:
-        java-version: 11
+        java-version: 8
     - name: Install required libs
       run: sudo apt install libjinput-java libxcursor-dev libxrandr-dev libxxf86vm-dev
     - name: Build with Ant

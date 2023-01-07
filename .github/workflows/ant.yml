@@ -24,17 +24,16 @@ jobs:
     - name: Install required libs
       run: sudo apt install libjinput-java libxcursor-dev libxrandr-dev libxxf86vm-dev
     - name: Build with Ant
-      run: ant -noinput -buildfile build.xml -Ddo.delete=yes generate-all compile jars release
+      run: ant -noinput -buildfile build.xml -Ddo.delete=yes generate-all compile jars release maven
     - uses: actions/upload-artifact@v1
       with:
-        name: lwjgl-2.9.4.zip
-        path: dist/lwjgl-2.9.4.zip
+        name: lwjgl-dist
+        path: dist/
     - name: Release
-      uses: softprops/action-gh-release@v1
+      uses: svenstaro/upload-release-action@v2
       if: startsWith(github.ref, 'refs/tags/')
       with:
-        files: dist/lwjgl-2.9.4.zip
-        tag_name:  ${{ github.ref }}
-        name: Release ${{ github.ref }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: dist/lwjgl-*.zip
+        overwrite: true
+        file_glob: true

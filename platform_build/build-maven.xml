@@ -25,6 +25,7 @@
 	 <target name="-fixmavenversion">
 		<script language="javascript">
 			<![CDATA[
+				load("nashorn:mozilla_compat.js");
 				importPackage(java.lang);
 				var originalVersion = project.getProperty("lwjgl.version");
 				System.out.println("LWJGL Version: " + originalVersion);
@@ -83,7 +84,7 @@
         <antcall target="maven"/>
 	</target>
 	
-	<target name="maven" depends="-fixmavenversion, -checkjinputversion"> <!-- Added as dependency because using antcall creates a new project scope -->
+	<target name="maven" depends="-fixmavenversion"> <!-- Added as dependency because using antcall creates a new project scope -->
 		<delete dir="${lwjgl.dstMaven}" quiet="true" failonerror="false" taskname="cleaning maven dist" />
 		<mkdir dir="${lwjgl.dstMaven}"   taskname="initialiazing temp maven folder" />
 		<antcall target="-copylwjgljars" />

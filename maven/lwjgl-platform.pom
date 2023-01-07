@@ -1,11 +1,6 @@
 <project>
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.lwjgl.lwjgl</groupId>
-		<artifactId>parent</artifactId>
-		<version>@VERSION@</version>
-	</parent>
-	<groupId>org.lwjgl.lwjgl</groupId>
+	<groupId>org.jmonkeyengine</groupId>
 	<artifactId>lwjgl-platform</artifactId>
 	<packaging>pom</packaging>
 	<name>Lighweight Java Game Library - Platform</name>

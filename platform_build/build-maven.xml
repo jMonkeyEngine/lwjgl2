@@ -4,7 +4,7 @@
 	<property name="lwjgl.maven"			location="maven" />
 	<property name="lwjgl.dstMaven"			location="${lwjgl.temp}/maven" />
 	<property name="lwjgl.src.java" 		location="${lwjgl.src}/java" />
-	<property name="jinput.version"			value="2.0.5" />
+	<property name="jinput.version"			value="2.0.9" />
 	
 	<fileset id="lwjgl-sources.manual.fileset" dir="${lwjgl.src.java}">
 		<patternset refid="lwjgl.package.pattern" />

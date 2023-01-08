@@ -11,4 +11,17 @@
 		<url>http://java-game-lib.svn.sourceforge.net/viewvc/java-game-lib/trunk/</url>
 		<connection>https://java-game-lib.svn.sourceforge.net/svnroot/java-game-lib </connection>
 	</scm>
+	<developers>
+		<developer>
+			<id>LWJGL</id>
+			<name>LWJGL Project</name>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>New BSD (3-clause) License</name>
+			<url>http://opensource.org/licenses/BSD-3-Clause</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 </project>

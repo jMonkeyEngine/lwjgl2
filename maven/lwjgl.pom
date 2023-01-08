@@ -13,14 +13,14 @@
 	</scm>
 	<developers>
 		<developer>
-			<id>LWJGL</id>
-			<name>LWJGL Project</name>
+			<id>Developers</id>
+			<url>http://lwjgl.org/credits.php</url>
 		</developer>
 	</developers>
 	<licenses>
 		<license>
-			<name>New BSD (3-clause) License</name>
-			<url>http://opensource.org/licenses/BSD-3-Clause</url>
+			<name>BSD</name>
+			<url>http://lwjgl.org/license.php</url>
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
